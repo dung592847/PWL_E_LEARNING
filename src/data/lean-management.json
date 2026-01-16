@@ -1,0 +1,109 @@
+{
+  "title": "Lean Management & 5S-Methode",
+  "subtitle": "Systematische Arbeitsplatzorganisation für maximale Effizienz",
+  "definition": {
+    "text": "5S ist eine aus Japan stammende Methode zur systematischen Gestaltung der Arbeitsumgebung. Sie bildet das Fundament für Lean Management und schafft die Basis für weitere Verbesserungsmethoden wie Kaizen, TPM und standardisierte Arbeit.",
+    "origin": "Toyota Production System (TPS), Japan",
+    "goal": "Verschwendung eliminieren, Effizienz steigern, Qualität verbessern"
+  },
+  "steps": [
+    {
+      "id": 1,
+      "german": "Sortieren",
+      "japanese": "Seiri (整理)",
+      "description": "Trennung von Notwendigem und Überflüssigem. Alles was nicht regelmäßig benötigt wird, wird aussortiert oder an einen anderen Ort gebracht.",
+      "actions": [
+        "Red-Tag-Aktion durchführen",
+        "Nicht benötigte Gegenstände markieren",
+        "Entscheidung: Entsorgen, Versetzen oder Behalten"
+      ],
+      "example": "In der Fertigung werden alle Werkzeuge geprüft - selten genutzte kommen ins Zentrallager."
+    },
+    {
+      "id": 2,
+      "german": "Systematisieren",
+      "japanese": "Seiton (整頓)",
+      "description": "Systematische Anordnung der verbleibenden Gegenstände. Jedes Teil bekommt einen festen, sinnvollen Platz nach dem Prinzip 'Ein Griff - Ein Teil'.",
+      "actions": [
+        "Ergonomische Anordnung nach Häufigkeit",
+        "Beschriftung und Visualisierung",
+        "Shadow Boards für Werkzeuge"
+      ],
+      "example": "Häufig genutzte Werkzeuge in Griffweite, seltener genutzte in Schubladen mit Beschriftung."
+    },
+    {
+      "id": 3,
+      "german": "Säubern",
+      "japanese": "Seiso (清掃)",
+      "description": "Regelmäßige Reinigung als Grundlage für Inspektion. Sauberkeit macht Abweichungen sichtbar und erhöht die Wertschätzung für den Arbeitsplatz.",
+      "actions": [
+        "Reinigungsplan erstellen",
+        "Verschmutzungsquellen identifizieren",
+        "Reinigung als Inspektion nutzen"
+      ],
+      "example": "Tägliche 5-Minuten-Reinigung macht Ölflecken sichtbar, die auf undichte Maschinen hinweisen."
+    },
+    {
+      "id": 4,
+      "german": "Standardisieren",
+      "japanese": "Seiketsu (清潔)",
+      "description": "Standards entwickeln, um die ersten drei S dauerhaft zu verankern. Checklisten, Fotos und Regeln dokumentieren den Soll-Zustand.",
+      "actions": [
+        "Standards visuell dokumentieren",
+        "Checklisten erstellen",
+        "Verantwortlichkeiten festlegen"
+      ],
+      "example": "Foto des optimalen Zustands am Arbeitsplatz als Referenz für alle Mitarbeiter."
+    },
+    {
+      "id": 5,
+      "german": "Selbstdisziplin",
+      "japanese": "Shitsuke (躾)",
+      "description": "Nachhaltige Einhaltung durch Gewohnheit und kontinuierliche Verbesserung. Die Methode wird Teil der Unternehmenskultur.",
+      "actions": [
+        "Regelmäßige Audits durchführen",
+        "Training und Coaching",
+        "Erfolge feiern und kommunizieren"
+      ],
+      "example": "Wöchentliche 5S-Audits mit Punktesystem und Team-Wettkampf zwischen Abteilungen."
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Produktivität",
+      "value": "+25%",
+      "description": "Durch reduzierte Suchzeiten und optimierte Arbeitsabläufe"
+    },
+    {
+      "title": "Fehlerquote",
+      "value": "-40%",
+      "description": "Weniger Ausschuss durch standardisierte Prozesse"
+    },
+    {
+      "title": "Unfallrate",
+      "value": "-60%",
+      "description": "Weniger Arbeitsunfälle durch Ordnung und Sauberkeit"
+    },
+    {
+      "title": "Nutzfläche",
+      "value": "+20%",
+      "description": "Mehr verfügbare Fläche durch Entrümpelung (Beseitigung unnötiger Gegenstände)"
+    }
+  ],
+  "armanApplication": {
+    "situation": "Arman Industries hatte mit langen Suchzeiten, unübersichtlichen Arbeitsplätzen und hohen Ausschussquoten zu kämpfen. Die Einführung von 5S sollte die Basis für weitere Lean-Initiativen schaffen.",
+    "implementation": [
+      "Kick-off Workshop mit allen Mitarbeitern zur Sensibilisierung",
+      "Pilotbereich in der Elektronikfertigung ausgewählt",
+      "Red-Tag-Aktion: 340 Gegenstände markiert, 180 entsorgt",
+      "Shadow Boards für 120 Werkzeuge installiert",
+      "Tägliche 5-Minuten-Routine für Reinigung eingeführt",
+      "Wöchentliche Audits mit Feedback-System etabliert"
+    ],
+    "results": [
+      "Suchzeiten um 65% reduziert",
+      "Ausschussquote von 4,2% auf 2,1% gesenkt",
+      "Mitarbeiterzufriedenheit um 28% gestiegen"
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "title": "Zielkonflikte in der Logistik",
+  "subtitle": "Optimale Balance zwischen konkurrierenden Zielen finden",
+  "definition": {
+    "text": "In der Produktionswirtschaft stehen viele Ziele in Konkurrenz zueinander. Die Optimierung eines Ziels führt oft zur Verschlechterung eines anderen. Das Verständnis dieser Trade-offs ist essentiell für fundierte Entscheidungen."
+  },
+  "conflict": {
+    "goal1": {
+      "name": "Niedrige Bestände",
+      "icon": "📉",
+      "description": "Geringe Kapitalbindung, wenig Lagerkosten, keine Veralterung",
+      "benefits": [
+        "Weniger gebundenes Kapital",
+        "Niedrigere Lagerkosten",
+        "Geringeres Obsoleszenzrisiko"
+      ],
+      "risks": [
+        "Lieferengpässe bei Schwankungen",
+        "Höhere Fehlmengenkosten",
+        "Produktionsstillstand möglich"
+      ]
+    },
+    "goal2": {
+      "name": "Hohe Lieferbereitschaft",
+      "icon": "📈",
+      "description": "Sofortige Verfügbarkeit, keine Wartezeiten, zufriedene Kunden",
+      "benefits": [
+        "Hohe Kundenzufriedenheit",
+        "Keine Fehlmengenkosten",
+        "Flexibilität bei Bedarfsspitzen"
+      ],
+      "risks": [
+        "Hohe Kapitalbindung",
+        "Veraltungsrisiko",
+        "Hohe Lager- und Handlingskosten"
+      ]
+    }
+  },
+  "optimization": {
+    "title": "Das Optimum finden",
+    "description": "Die Andler-Formel (EOQ) dient zur Ermittlung der optimalen Losgröße, bei der die Summe aus Bestell- bzw. Rüstkosten und Lagerhaltungskosten minimal ist.",
+    "formula": "q* = √(2 × D × S / H)",
+    "variables": [
+      { "symbol": "D", "name": "Jahresbedarf" },
+      { "symbol": "S", "name": "Rüstkosten pro Auftrag" },
+      { "symbol": "H", "name": "Lagerhaltungskosten pro Einheit" }
+    ]
+  },
+  "methodConnections": {
+    "title": "Verbindung zu den Methoden",
+    "connections": [
+      {
+        "method": "Lean/5S",
+        "contribution": "Reduziert Verschwendung und ermöglicht niedrigere Bestände",
+        "details": [
+          "Kurze Rüstzeiten durch SMED",
+          "Übersichtliche Läger durch 5S",
+          "Pull statt Push-Steuerung"
+        ]
+      },
+      {
+        "method": "ABC/XYZ",
+        "contribution": "Differenzierte Bestandsstrategien je nach Materialart",
+        "details": [
+          "Hohe Bestände nur bei CZ-Teilen akzeptabel",
+          "A-Teile mit JIT ohne Bestand",
+          "Optimaler Kompromiss pro Kategorie"
+        ]
+      },
+      {
+        "method": "Matrix-Minimum",
+        "contribution": "Optimierte Transportwege reduzieren Durchlaufzeit",
+        "details": [
+          "Kürzere Lieferzeiten ermöglichen niedrigere Bestände",
+          "Kostenoptimierung schafft Spielraum",
+          "Bessere Planung durch Transparenz"
+        ]
+      }
+    ]
+  },
+  "armanCase": {
+    "title": "Arman Industries Fallbeispiel",
+    "situation": "Arman Industries stand vor dem klassischen Dilemma: Der Vertrieb forderte 99% Lieferbereitschaft, das Controlling wollte die Lagerbestände um 30% senken.",
+    "analysis": {
+      "problem": "Zielkonflikt zwischen Kundenzufriedenheit und Kapitalbindung",
+      "options": [
+        {
+          "name": "Option A: Hohe Bestände",
+          "expectedDeliveryRate": "99%",
+          "inventoryValue": "4,2 Mio €",
+          "risk": "Hohe Kapitalbindung, Veralterungsrisiko"
+        },
+        {
+          "name": "Option B: Niedrige Bestände",
+          "expectedDeliveryRate": "85%",
+          "inventoryValue": "2,5 Mio €",
+          "risk": "Kundenabwanderung, Fehlmengenkosten"
+        },
+        {
+          "name": "Option C: Differenziert (gewählt)",
+          "expectedDeliveryRate": "97%",
+          "inventoryValue": "3,0 Mio €",
+          "savingsPerYear": "240.000€ Einsparung"
+        }
+      ]
+    },
+    "solution": {
+      "approach": "Differenzierte Strategie nach ABC/XYZ-Klassen",
+      "actions": [
+        "A-Teile: JIT-Anlieferung, minimale Bestände",
+        "B-Teile: 2-Wochen-Reichweite als Standard",
+        "C-Teile: Sammelbestellung, höhere Reichweite akzeptabel"
+      ],
+      "result": "Lieferbereitschaft 97% bei 30% weniger Kapitalbindung gegenüber Ausgangszustand."
+    }
+  }
+}

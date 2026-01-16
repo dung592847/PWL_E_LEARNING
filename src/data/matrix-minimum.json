@@ -1,0 +1,105 @@
+{
+  "title": "Matrix-Minimum-Methode",
+  "subtitle": "Heuristik zur Lösung des Transportproblems",
+  "definition": {
+    "text": "Die Matrix-Minimum-Methode ist ein heuristisches Eröffnungsverfahren zur Bestimmung einer zulässigen Basislösung für Transportprobleme. Sie liefert oft bessere Startlösungen als die Nordwestecken-Methode.",
+    "goal": "Minimierung der Gesamttransportkosten bei gegebenen Angebots- und Nachfragemengen",
+    "type": "Greedy-Heuristik (wählt stets die lokal günstigste Option)"
+  },
+  "algorithm": {
+    "steps": [
+      {
+        "step": 1,
+        "title": "Minimum identifizieren",
+        "description": "Suche in der gesamten Kostenmatrix das Feld mit den geringsten Transportkosten pro Einheit (c_ij).",
+        "note": "Bei mehreren Minima: Wähle das mit größerer möglicher Transportmenge."
+      },
+      {
+        "step": 2,
+        "title": "Maximum zuweisen",
+        "description": "Weise diesem Feld die maximal mögliche Transportmenge zu: min(Angebot_i, Nachfrage_j).",
+        "note": null
+      },
+      {
+        "step": 3,
+        "title": "Kapazitäten anpassen",
+        "description": "Reduziere Angebot der Zeile und Nachfrage der Spalte um die zugewiesene Menge.",
+        "note": null
+      },
+      {
+        "step": 4,
+        "title": "Streichen",
+        "description": "Streiche die Zeile oder Spalte, deren Kapazität auf 0 gesunken ist.",
+        "note": "Wenn beide gleichzeitig 0 werden, streiche nur eine (Degenerierung vermeiden)."
+      },
+      {
+        "step": 5,
+        "title": "Wiederholen",
+        "description": "Wiederhole Schritte 1-4 mit der reduzierten Matrix, bis alle Angebote und Nachfragen erfüllt sind.",
+        "note": null
+      }
+    ]
+  },
+  "armanExample": {
+    "scenario": "Arman Industries muss aus 3 Fertigungsstandorten (F1, F2, F3) an 4 Kundenregionen (K1-K4) liefern. Gesucht: Kostenminimale Verteilung.",
+    "costMatrix": {
+      "headers": ["K1", "K2", "K3", "K4", "Angebot"],
+      "rows": [
+        { "name": "F1", "costs": [12, 8, 14, 10], "supply": 150 },
+        { "name": "F2", "costs": [15, 6, 11, 13], "supply": 200 },
+        { "name": "F3", "costs": [10, 9, 7, 12], "supply": 150 }
+      ],
+      "demand": [100, 150, 120, 130]
+    },
+    "solutionSteps": [
+      {
+        "step": 1,
+        "action": "Minimum bei F2-K2 (Kosten: 6€). Zuweisung: min(200, 150) = 150 Einheiten.",
+        "highlight": { "row": "F2", "col": "K2" },
+        "allocation": { "F2": { "K2": 150 } },
+        "remaining": { "supply": { "F2": 50 }, "demand": { "K2": 0 } }
+      },
+      {
+        "step": 2,
+        "action": "Spalte K2 gestrichen. Neues Minimum: F3-K3 (Kosten: 7€). Zuweisung: min(150, 120) = 120.",
+        "highlight": { "row": "F3", "col": "K3" },
+        "allocation": { "F2": { "K2": 150 }, "F3": { "K3": 120 } },
+        "remaining": { "supply": { "F3": 30 }, "demand": { "K3": 0 } }
+      },
+      {
+        "step": 3,
+        "action": "Spalte K3 gestrichen. Minimum F1-K4 (10€). Zuweisung: 130.",
+        "highlight": { "row": "F1", "col": "K4" },
+        "allocation": { "F2": { "K2": 150 }, "F3": { "K3": 120 }, "F1": { "K4": 130 } },
+        "remaining": { "supply": { "F1": 20 }, "demand": { "K4": 0 } }
+      },
+      {
+        "step": 4,
+        "action": "Verbleibend: F1(20), F2(50), F3(30) → K1(100). Günstigster: F3-K1 (10€). Zuweisung: 30.",
+        "highlight": { "row": "F3", "col": "K1" },
+        "allocation": { "F2": { "K2": 150 }, "F3": { "K3": 120, "K1": 30 }, "F1": { "K4": 130 } },
+        "remaining": { "supply": { "F3": 0 }, "demand": { "K1": 70 } }
+      },
+      {
+        "step": 5,
+        "action": "F3 gestrichen. Nächstes Minimum: F1-K1 (12€). Zuweisung: 20 Einheiten.",
+        "highlight": { "row": "F1", "col": "K1" },
+        "allocation": { "F2": { "K2": 150 }, "F3": { "K3": 120, "K1": 30 }, "F1": { "K4": 130, "K1": 20 } },
+        "remaining": { "supply": { "F1": 0 }, "demand": { "K1": 50 } }
+      },
+      {
+        "step": 6,
+        "action": "F1 gestrichen. Verbleibend: F2-K1 (15€). Zuweisung: 50 Einheiten. Fertig!",
+        "highlight": { "row": "F2", "col": "K1" },
+        "allocation": { "F2": { "K2": 150, "K1": 50 }, "F3": { "K3": 120, "K1": 30 }, "F1": { "K4": 130, "K1": 20 } },
+        "remaining": {}
+      }
+    ],
+    "totalCost": "4.640€",
+    "comparison": {
+      "nordwestecke": "5.420€",
+      "matrixMinimum": "4.640€",
+      "savings": "780€ (14,4%)"
+    }
+  }
+}

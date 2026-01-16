@@ -1,0 +1,85 @@
+{
+  "title": "ABC/XYZ-Analyse",
+  "subtitle": "Materialklassifizierung für optimale Bestandssteuerung",
+  "abcAnalysis": {
+    "definition": "Die ABC-Analyse klassifiziert Materialien nach ihrem Wertanteil am Gesamtverbrauch. Sie basiert auf dem Pareto-Prinzip und ermöglicht eine differenzierte Bestandssteuerung.",
+    "principle": "80/20-Regel: Ca. 20% der Artikel machen ca. 80% des Verbrauchswerts aus.",
+    "classes": [
+      {
+        "class": "A",
+        "description": "Hochwertige Güter",
+        "valueShare": "70-80%",
+        "quantityShare": "10-20%",
+        "characteristics": "Intensive Betreuung, häufige Bestellungen, niedrige Bestände",
+        "color": "#39ff14"
+      },
+      {
+        "class": "B",
+        "description": "Mittelwertige Güter",
+        "valueShare": "15-20%",
+        "quantityShare": "20-30%",
+        "characteristics": "Mittlere Betreuungsintensität, Sicherheitsbestände",
+        "color": "#00d4ff"
+      },
+      {
+        "class": "C",
+        "description": "Niedrigwertige Güter",
+        "valueShare": "5-10%",
+        "quantityShare": "50-70%",
+        "characteristics": "Vereinfachte Beschaffung, größere Bestellmengen",
+        "color": "#bd00ff"
+      }
+    ]
+  },
+  "xyzAnalysis": {
+    "definition": "Die XYZ-Analyse klassifiziert Materialien nach der Regelmäßigkeit ihres Verbrauchs und damit nach der Vorhersagegenauigkeit.",
+    "classes": [
+      {
+        "class": "X",
+        "description": "Konstanter Verbrauch",
+        "variationCoefficient": "< 25%",
+        "management": "Hohe Prognosegenauigkeit, synchrone Beschaffung möglich"
+      },
+      {
+        "class": "Y",
+        "description": "Schwankender Verbrauch",
+        "variationCoefficient": "25-50%",
+        "management": "Mittlere Prognosegenauigkeit, Sicherheitsbestände erforderlich"
+      },
+      {
+        "class": "Z",
+        "description": "Unregelmäßiger Verbrauch",
+        "variationCoefficient": "> 50%",
+        "management": "Geringe Prognosegenauigkeit, Einzelbeschaffung"
+      }
+    ]
+  },
+  "combinedMatrix": {
+    "description": "Die Kombination beider Analysen ergibt eine 9-Felder-Matrix, die optimale Beschaffungsstrategien für jede Materialkategorie definiert.",
+    "strategies": {
+      "AX": { "name": "Just-in-Time", "description": "Synchrone Beschaffung, minimale Lagerbestände", "priority": "high" },
+      "AY": { "name": "Bedarfsgesteuert", "description": "Bedarfsorientierte Beschaffung mit Sicherheitsbestand", "priority": "high" },
+      "AZ": { "name": "Einzelbeschaffung", "description": "Auftragsbezogene Beschaffung ohne Lager", "priority": "high" },
+      "BX": { "name": "Programmgesteuert", "description": "Rahmenverträge mit Abruf", "priority": "medium" },
+      "BY": { "name": "Vorratsbeschaffung", "description": "Regelmäßige Bestellung mit Puffer", "priority": "medium" },
+      "BZ": { "name": "Einzelbeschaffung", "description": "Bedarfsorientiert mit Lieferantenrahmen", "priority": "medium" },
+      "CX": { "name": "Kanban/Automatisch", "description": "Automatische Nachbestellung bei Unterschreitung", "priority": "low" },
+      "CY": { "name": "Sammelbestellung", "description": "Periodische Bündelung von Bestellungen", "priority": "low" },
+      "CZ": { "name": "Bedarfsfall", "description": "Beschaffung nur bei konkretem Bedarf", "priority": "low" }
+    }
+  },
+  "armanExample": {
+    "scenario": "Arman Industries analysierte das Materiallager mit über 3.500 verschiedenen Artikeln und klassifizierte diese nach ABC/XYZ-Kriterien.",
+    "results": {
+      "A_items": 469,
+      "B_items": 1302,
+      "C_items": 4929,
+      "savings": "380.000€ jährlich durch optimierte Lagerhaltung"
+    },
+    "implementation": [
+      "A-Teile: Einführung von JIT-Belieferung für Hauptkomponenten",
+      "B-Teile: Rahmenverträge mit 2-Wochen-Abruf",
+      "C-Teile: Kanban-System mit automatischer Nachbestellung"
+    ]
+  }
+}

@@ -613,4 +613,169 @@ const calculateExerciseCost = () => {
 .solution-box p {
   margin-bottom: 8px;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .module-header {
+    padding: 40px 0;
+  }
+  
+  .module-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .content-section {
+    margin: 40px 0;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .def-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .algo-card {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .algo-num {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+  
+  .sim-controls {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .sim-status {
+    order: -1;
+  }
+  
+  .cost-table th,
+  .cost-table td {
+    padding: 8px 5px;
+    font-size: 0.8rem;
+  }
+  
+  .alloc {
+    font-size: 0.6rem;
+    padding: 2px 4px;
+  }
+  
+  .comparison {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .exercise-container {
+    padding: 15px;
+  }
+  
+  .exercise-table th,
+  .exercise-table td {
+    padding: 8px 5px;
+    font-size: 0.85rem;
+  }
+  
+  .exercise-cell input {
+    width: 50px;
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+  
+  .exercise-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .exercise-actions .btn {
+    width: 100%;
+  }
+  
+  .module-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .module-nav .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .module-header {
+    padding: 30px 0;
+  }
+  
+  .module-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .header-badge {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+  
+  .simulation-container {
+    padding: 10px;
+  }
+  
+  .cost-table {
+    font-size: 0.7rem;
+  }
+  
+  .cost-table th,
+  .cost-table td {
+    padding: 6px 3px;
+  }
+  
+  .total-cost {
+    font-size: 1.2rem;
+  }
+  
+  .exercise-table th small {
+    font-size: 0.65rem;
+  }
+  
+  .exercise-cell .cost {
+    font-size: 0.65rem;
+  }
+  
+  .exercise-cell input {
+    width: 40px;
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+  
+  .solution-box {
+    padding: 15px;
+  }
+  
+  .solution-box ol {
+    padding-left: 15px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .cost-table th,
+  .cost-table td {
+    padding: 4px 2px;
+    font-size: 0.65rem;
+  }
+  
+  .exercise-cell input {
+    width: 35px;
+    padding: 4px;
+  }
+}
 </style>

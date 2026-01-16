@@ -219,9 +219,139 @@ const content = ref(conflictData)
 }
 
 @media (max-width: 768px) {
-  .conflict-scale { flex-direction: column; align-items: center; gap: 40px; }
-  .scale-side { width: 100%; }
-  .scale-pivot { position: relative; left: auto; top: auto; transform: none; }
-  .options-container { grid-template-columns: 1fr; }
+  .module-header {
+    padding: 40px 0;
+  }
+  
+  .module-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .content-section {
+    margin: 40px 0;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .intro-text {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  .conflict-scale {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .scale-side {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .scale-pivot {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    order: -1;
+  }
+  
+  .icon-big {
+    font-size: 2.5rem;
+  }
+  
+  .formula-box {
+    font-size: 1rem;
+    padding: 15px;
+    overflow-x: auto;
+  }
+  
+  .formula-box code {
+    font-size: 0.85rem;
+    word-break: break-all;
+  }
+  
+  .variables-grid {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .options-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .option-card {
+    padding: 15px;
+  }
+  
+  .solution-box {
+    padding: 15px;
+  }
+  
+  .solution-box ul {
+    padding-left: 15px;
+  }
+  
+  .module-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .module-nav .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .module-header {
+    padding: 30px 0;
+  }
+  
+  .module-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .header-badge {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+  
+  .scale-side {
+    padding: 15px;
+  }
+  
+  .scale-side h3 {
+    font-size: 1.1rem;
+  }
+  
+  .scale-side p {
+    font-size: 0.9rem;
+  }
+  
+  .benefit-list,
+  .danger-list {
+    font-size: 0.85rem;
+  }
+  
+  .vs-badge {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+  
+  .card {
+    padding: 15px;
+  }
+  
+  .result {
+    font-size: 1rem;
+  }
 }
 </style>

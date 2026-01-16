@@ -102,6 +102,33 @@ h1, h2, h3 { margin: 0 0 1rem; font-weight: 700; }
 
 @media (max-width: 768px) {
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+  
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.1rem; }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+  }
+  
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
 }
 
 /* Cards */
@@ -110,6 +137,12 @@ h1, h2, h3 { margin: 0 0 1rem; font-weight: 700; }
   padding: var(--spacing-lg);
   border-radius: 12px;
   border: 1px solid var(--color-bg-hover);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: var(--spacing-md);
+  }
 }
 
 /* Animations */

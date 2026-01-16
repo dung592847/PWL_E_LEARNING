@@ -79,4 +79,71 @@
 .module-card p { color: var(--color-text-secondary); font-size: 0.95rem; }
 
 .quiz-card-home { border-color: var(--color-neon-dim); }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-sub {
+    font-size: 1.1rem;
+    padding: 0 20px;
+  }
+  
+  .modules-grid {
+    margin-top: -30px;
+    gap: 20px;
+    padding-bottom: 50px;
+  }
+  
+  .module-card {
+    padding: 25px;
+  }
+  
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 0;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-sub {
+    font-size: 1rem;
+  }
+  
+  .modules-grid {
+    margin-top: -20px;
+    gap: 15px;
+  }
+  
+  .module-card {
+    padding: 20px;
+  }
+  
+  .module-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .module-card p {
+    font-size: 0.9rem;
+  }
+  
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+}
 </style>

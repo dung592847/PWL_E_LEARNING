@@ -909,4 +909,297 @@ const resetExercise = () => {
 .percent-input {
   width: 80px !important;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .module-header {
+    padding: 40px 0;
+  }
+  
+  .module-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .content-section {
+    margin: 40px 0;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .class-card {
+    margin-bottom: 15px;
+  }
+  
+  .class-big {
+    font-size: 2.5rem;
+  }
+  
+  .class-body {
+    padding: 15px;
+  }
+  
+  /* Matrix Visual */
+  .matrix-visual {
+    padding-left: 30px;
+    overflow-x: auto;
+  }
+  
+  .matrix-row {
+    grid-template-columns: 40px 100px 100px 100px;
+  }
+  
+  .matrix-header-row {
+    grid-template-columns: 40px 100px 100px 100px;
+  }
+  
+  .matrix-cell {
+    height: 80px;
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+  
+  .header-cell,
+  .header-cell-side {
+    font-size: 0.85rem;
+  }
+  
+  /* Tables */
+  .data-table th,
+  .data-table td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+  
+  .exercise-table th,
+  .exercise-table td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+  
+  .exercise-card {
+    padding: 20px;
+  }
+  
+  .formula-box {
+    font-size: 0.9rem;
+    padding: 12px 15px;
+  }
+  
+  .classification-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+  }
+  
+  .class-badge {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+  }
+  
+  .exercise-input,
+  .exercise-select {
+    width: 80px;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+  
+  .wide-input {
+    width: 100px !important;
+  }
+  
+  .percent-input {
+    width: 70px !important;
+  }
+  
+  .drag-col {
+    width: 30px;
+  }
+  
+  .drag-handle {
+    font-size: 1rem;
+  }
+  
+  .exercise-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .exercise-actions .btn {
+    width: 100%;
+  }
+  
+  .solution-table {
+    font-size: 0.75rem;
+  }
+  
+  .solution-table th,
+  .solution-table td {
+    padding: 6px 5px;
+  }
+  
+  /* Results */
+  .stat-box {
+    padding: 15px;
+  }
+  
+  .stat-value {
+    font-size: 1.5rem;
+  }
+  
+  .module-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .module-nav .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .module-header {
+    padding: 30px 0;
+  }
+  
+  .module-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .header-badge {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+  
+  .class-big {
+    font-size: 2rem;
+  }
+  
+  .class-body h4 {
+    font-size: 0.95rem;
+  }
+  
+  /* Matrix smaller */
+  .matrix-visual {
+    padding-left: 25px;
+  }
+  
+  .matrix-row {
+    grid-template-columns: 30px 80px 80px 80px;
+  }
+  
+  .matrix-header-row {
+    grid-template-columns: 30px 80px 80px 80px;
+  }
+  
+  .matrix-cell {
+    height: 70px;
+    font-size: 0.75rem;
+    padding: 5px;
+  }
+  
+  .matrix-cell small {
+    font-size: 0.6rem;
+  }
+  
+  .header-cell,
+  .header-cell-side {
+    font-size: 0.75rem;
+  }
+  
+  /* Tables */
+  .data-table {
+    font-size: 0.8rem;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 8px 5px;
+  }
+  
+  .exercise-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .exercise-table th,
+  .exercise-table td {
+    padding: 8px 5px;
+    font-size: 0.8rem;
+  }
+  
+  .dataset-label {
+    font-size: 1rem;
+  }
+  
+  .exercise-input,
+  .exercise-select {
+    width: 65px;
+    padding: 6px 8px;
+    font-size: 0.85rem;
+  }
+  
+  .wide-input {
+    width: 85px !important;
+  }
+  
+  .percent-input {
+    width: 55px !important;
+  }
+  
+  .solution-table {
+    font-size: 0.65rem;
+  }
+  
+  .solution-table th,
+  .solution-table td {
+    padding: 4px 3px;
+  }
+  
+  .exercise-feedback {
+    padding: 15px;
+  }
+  
+  .exercise-feedback h4 {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .matrix-row {
+    grid-template-columns: 25px 65px 65px 65px;
+  }
+  
+  .matrix-header-row {
+    grid-template-columns: 25px 65px 65px 65px;
+  }
+  
+  .matrix-cell {
+    height: 60px;
+    font-size: 0.65rem;
+  }
+  
+  .exercise-input,
+  .exercise-select {
+    width: 55px;
+    padding: 5px 6px;
+    font-size: 0.8rem;
+  }
+  
+  .wide-input {
+    width: 70px !important;
+  }
+  
+  .percent-input {
+    width: 45px !important;
+  }
+}
 </style>

@@ -53,8 +53,72 @@
 
 .about-link { font-size: 0.9rem; color: var(--color-text-secondary); opacity: 0.7; }
 
-@media (max-width: 768px) {
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+@media (max-width: 900px) {
   .nav-links { gap: 15px; }
+  .nav-links a { font-size: 0.85rem; }
   .about-link { display: none; }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 0;
+  }
+  
+  .nav-content {
+    flex-wrap: wrap;
+  }
+  
+  .brand {
+    font-size: 1.3rem;
+  }
+  
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--color-bg-hover);
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links a {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+  
+  .nav-btn {
+    padding: 5px 12px !important;
+    font-size: 0.8rem !important;
+  }
+  
+  .about-link { display: none; }
+}
+
+@media (max-width: 480px) {
+  .brand {
+    font-size: 1.1rem;
+  }
+  
+  .nav-links {
+    gap: 5px;
+  }
+  
+  .nav-links a {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+  }
 }
 </style>

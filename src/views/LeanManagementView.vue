@@ -222,10 +222,289 @@ const activeStep = ref(1)
 .module-nav {
   display: flex; justify-content: space-between; margin-top: 60px;
   padding-top: 20px; border-top: 1px solid var(--color-bg-hover);
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
-  .grid-2 { grid-template-columns: 1fr; }
+  .module-header {
+    padding: 40px 0;
+  }
+  
+  .module-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .content-section {
+    margin: 40px 0;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .definition-card {
+    padding: 20px;
+  }
+  
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .meta-info {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .visual-center {
+    min-height: 250px;
+    margin-top: 30px;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .benefit-card {
+    padding: 15px;
+  }
+  
+  .benefit-value {
+    font-size: 1.5rem;
+  }
+  
+  .benefit-card h4 {
+    font-size: 0.9rem;
+  }
+  
+  .benefit-card p {
+    font-size: 0.8rem;
+  }
+  
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .module-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .module-nav .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .application-section .card {
+    padding: 20px;
+  }
+  
+  .timeline {
+    padding-left: 20px;
+  }
+  
+  .timeline-marker {
+    left: -26px;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .module-header {
+    padding: 30px 0;
+  }
+  
+  .module-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .header-badge {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .content-section {
+    margin: 30px 0;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .definition-card {
+    padding: 15px;
+  }
+  
+  .definition-card h2 {
+    font-size: 1.2rem;
+  }
+  
+  .definition-card p {
+    font-size: 0.9rem;
+  }
+  
+  /* Circle Chart Mobile */
+  .visual-center {
+    min-height: 200px;
+    margin-top: 20px;
+  }
+  
+  .circle-chart {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .circle-text {
+    font-size: 1.5rem;
+  }
+  
+  .orbit-item {
+    font-size: 0.65rem;
+    padding: 3px 6px;
+  }
+  
+  .item-1 { top: -30px; }
+  .item-2 { top: 10px; right: -70px; }
+  .item-3 { bottom: -5px; right: -55px; }
+  .item-4 { bottom: -5px; left: -60px; }
+  .item-5 { top: 10px; left: -70px; }
+  
+  /* Steps Cards Mobile */
+  .step-card {
+    padding: 15px;
+  }
+  
+  .step-header {
+    gap: 10px;
+  }
+  
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .step-titles h3 {
+    font-size: 1rem;
+  }
+  
+  .japanese {
+    font-size: 0.8rem;
+  }
+  
+  .step-content p {
+    font-size: 0.9rem;
+  }
+  
+  .action-list {
+    font-size: 0.85rem;
+    padding-left: 15px;
+  }
+  
+  .example-box {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+  
+  /* Benefits Mobile */
+  .benefits-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  
+  .benefit-card {
+    padding: 12px 8px;
+  }
+  
+  .benefit-value {
+    font-size: 1.3rem;
+  }
+  
+  .benefit-card h4 {
+    font-size: 0.8rem;
+    margin: 5px 0;
+  }
+  
+  .benefit-card p {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+  
+  /* Application Section Mobile */
+  .application-section .card {
+    padding: 15px;
+  }
+  
+  .application-section h2 {
+    font-size: 1.2rem;
+  }
+  
+  .situation {
+    font-size: 0.95rem;
+  }
+  
+  .timeline {
+    padding-left: 18px;
+    margin: 15px 0;
+  }
+  
+  .timeline-item {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+  
+  .timeline-marker {
+    left: -24px;
+    width: 8px;
+    height: 8px;
+    top: 5px;
+  }
+  
+  .result-box {
+    padding: 15px;
+  }
+  
+  .result-box ul {
+    font-size: 0.9rem;
+  }
+  
+  /* Navigation Mobile */
+  .module-nav {
+    margin-top: 40px;
+  }
+  
+  .module-nav .btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .orbit-item {
+    font-size: 0.6rem;
+    padding: 2px 5px;
+  }
+  
+  .item-1 { top: -25px; }
+  .item-2 { top: 5px; right: -55px; }
+  .item-3 { bottom: -8px; right: -45px; }
+  .item-4 { bottom: -8px; left: -50px; }
+  .item-5 { top: 5px; left: -55px; }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

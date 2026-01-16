@@ -989,4 +989,222 @@ watch(() => route.params.topic, (topic) => {
     padding: 6px;
   }
 }
+
+/* Additional Responsive Styles */
+@media (max-width: 768px) {
+  .quiz-header {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .quiz-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .quiz-card-select {
+    padding: 20px;
+  }
+  
+  .quiz-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .question-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .option-btn {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .opt-letter {
+    padding: 4px 8px;
+    font-size: 0.85rem;
+  }
+  
+  .match-cols {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .match-item {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+  
+  .calc-formula-box {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .calc-class-info {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+  }
+  
+  .calc-data-card {
+    padding: 15px;
+  }
+  
+  .calc-value {
+    font-size: 1.2rem;
+  }
+  
+  .calc-inputs {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .calc-input,
+  .calc-select {
+    padding: 12px 15px;
+    font-size: 1rem;
+  }
+  
+  .feedback-box {
+    padding: 15px;
+  }
+  
+  .feedback-box h3 {
+    font-size: 1.1rem;
+  }
+  
+  .score-circle {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .score-large {
+    font-size: 2.5rem;
+  }
+  
+  .score-total {
+    font-size: 1rem;
+  }
+  
+  .result-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .result-actions .btn {
+    width: 100%;
+  }
+  
+  /* Transport Table Mobile */
+  .transport-table th,
+  .transport-table td {
+    padding: 8px 5px;
+    font-size: 0.8rem;
+  }
+  
+  .transport-cell input {
+    width: 45px;
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+  
+  .transport-cost-display {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-header {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .quiz-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .quiz-header p {
+    font-size: 0.9rem;
+  }
+  
+  .quiz-card-select {
+    padding: 15px;
+  }
+  
+  .quiz-card-select h3 {
+    font-size: 1rem;
+  }
+  
+  .quiz-card-select p {
+    font-size: 0.85rem;
+  }
+  
+  .quiz-icon {
+    font-size: 2rem;
+  }
+  
+  .question-container {
+    padding: 0;
+  }
+  
+  .question-text {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+  
+  .option-btn {
+    padding: 12px;
+    gap: 10px;
+  }
+  
+  .match-item {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+  
+  .calc-data-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .calc-label {
+    font-size: 0.85rem;
+  }
+  
+  .calc-value {
+    font-size: 1.1rem;
+  }
+  
+  .info-row {
+    margin: 5px -15px;
+    padding: 10px 15px !important;
+  }
+  
+  .transport-table th small {
+    font-size: 0.6rem;
+  }
+  
+  .transport-cell .cost-label {
+    font-size: 0.6rem;
+  }
+  
+  .transport-cell input {
+    width: 38px;
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .transport-table th,
+  .transport-table td {
+    padding: 5px 3px;
+    font-size: 0.7rem;
+  }
+  
+  .transport-cell input {
+    width: 32px;
+    padding: 4px;
+    font-size: 0.75rem;
+  }
+}
 </style>

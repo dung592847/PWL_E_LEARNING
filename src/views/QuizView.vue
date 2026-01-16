@@ -436,8 +436,8 @@ const isCorrect = computed(() => {
   if (currentQuestion.value.type === 'multiple-choice') {
     return selectedAnswer.value === currentQuestion.value.correctAnswer
   } else if (currentQuestion.value.type === 'matching') {
-    // Matching is always "correct" once finished successfully because we force correct matching
-    return true 
+    // Matching nur korrekt wenn ALLE Paare richtig zugeordnet sind
+    return isMatchingCorrect.value
   } else if (currentQuestion.value.type === 'calculation') {
     return isCalcVkCorrect.value && isCalcClassCorrect.value
   } else if (currentQuestion.value.type === 'abc-calculation') {

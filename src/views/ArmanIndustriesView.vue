@@ -392,6 +392,14 @@
   margin: 0;
 }
 
+/* Navigation */
+.module-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
 /* Utilities */
 .text-center {
   text-align: center;

@@ -14,18 +14,45 @@
         <router-link to="/quiz" class="nav-btn">Quiz</router-link>
       </div>
 
-      <router-link to="/company" class="about-link">Über uns</router-link>
+      <div class="nav-actions">
+        <button class="theme-toggle" @click="toggleTheme" :title="isDark ? 'Light Mode' : 'Dark Mode'">
+          <span v-if="isDark">☀️</span>
+          <span v-else>🌙</span>
+        </button>
+        <router-link to="/company" class="about-link">Über uns</router-link>
+      </div>
     </div>
   </nav>
 </template>
 
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const isDark = ref(true)
+
+const toggleTheme = () => {
+  isDark.value = !isDark.value
+  document.documentElement.setAttribute('data-theme', isDark.value ? 'dark' : 'light')
+  localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
+}
+
+onMounted(() => {
+  const savedTheme = localStorage.getItem('theme')
+  if (savedTheme) {
+    isDark.value = savedTheme === 'dark'
+    document.documentElement.setAttribute('data-theme', savedTheme)
+  }
+})
+</script>
+
 <style scoped>
 .navbar {
-  background: rgba(18, 18, 18, 0.95);
+  background: var(--color-bg-card);
   border-bottom: 1px solid var(--color-bg-hover);
   position: sticky; top: 0; z-index: 100;
   padding: 15px 0;
   backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease;
 }
 
 .nav-content {
@@ -52,6 +79,31 @@
 .nav-btn:hover { background: var(--color-neon); color: black !important; }
 
 .about-link { font-size: 0.9rem; color: var(--color-text-secondary); opacity: 0.7; }
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.theme-toggle {
+  background: var(--color-bg-hover);
+  border: 1px solid var(--color-bg-hover);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-neon);
+  transform: scale(1.1);
+}
 
 /* Mobile Menu Button */
 .mobile-menu-btn {

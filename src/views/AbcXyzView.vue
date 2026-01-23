@@ -191,26 +191,26 @@
         <h2 class="section-title">XYZ-Analyse</h2>
         <p>{{ content.xyzAnalysis.definition }}</p>
 
-        <div class="xyz-container">
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Klasse</th>
-                <th>Verbrauch</th>
-                <th>Schwankungskoeffizient</th>
-                <th>Management</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="cls in content.xyzAnalysis.classes" :key="cls.class">
-                <td class="class-cell">{{ cls.class }}</td>
-                <td>{{ cls.description }}</td>
-                <td>{{ cls.variationCoefficient }}</td>
-                <td>{{ cls.management }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <div class="xyz-container">
+            <div class="grid-3">
+              <div
+                v-for="cls in content.xyzAnalysis.classes"
+                :key="cls.class"
+                :class="['class-card', 'xyz-card', 'xyz-' + cls.class.toLowerCase()]"
+              >
+                <div class="class-header">
+                  <span class="class-big">{{ cls.class }}</span>
+                </div>
+                <div class="class-body">
+                  <h4>{{ cls.description }}</h4>
+                  <ul class="stats-list">
+                    <li><strong>Schwankungskoeffizient:</strong> {{ cls.variationCoefficient }}</li>
+                    <li><strong>Management:</strong> {{ cls.management }}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
       </section>
 
       <!-- Combined Matrix -->
@@ -671,6 +671,24 @@ const resetExercise = () => {
 .stats-list { list-style: none; margin: 15px 0; padding: 0; font-size: 0.9rem; color: var(--color-text-secondary); }
 .desc-small { font-size: 0.85rem; color: var(--color-text-secondary); }
 
+/* XYZ cards reuse ABC card styles but add small XYZ-specific tweaks */
+.xyz-card { border-color: var(--color-bg-hover); }
+.xyz-card .class-header { padding: 15px; }
+.xyz-card .class-big { font-size: 2.6rem; }
+.xyz-card .stats-list li { margin-bottom: 8px; }
+
+/* Specific XYZ color accents */
+.xyz-x { border-color: var(--color-xyz-x); }
+.xyz-x .class-header { background: var(--color-xyz-x-dim); border-bottom: 1px solid rgba(255,255,255,0.02); }
+.xyz-x .class-big { color: var(--color-xyz-x); }
+
+.xyz-y { border-color: var(--color-xyz-y); }
+.xyz-y .class-header { background: var(--color-xyz-y-dim); }
+.xyz-y .class-big { color: var(--color-xyz-y); }
+
+.xyz-z { border-color: var(--color-xyz-z); }
+.xyz-z .class-header { background: var(--color-xyz-z-dim); }
+.xyz-z .class-big { color: var(--color-xyz-z); }
 /* Table */
 .data-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
 .data-table th, .data-table td { padding: 12px; text-align: left; border-bottom: 1px solid var(--color-bg-hover); }
@@ -684,8 +702,18 @@ const resetExercise = () => {
 .matrix-content { display: flex; flex-direction: column; gap: 4px; }
 .matrix-header-row { display: grid; grid-template-columns: 50px 1fr 1fr 1fr; gap: 4px; }
 .matrix-row { display: grid; grid-template-columns: 50px 150px 150px 150px; gap: 4px; }
-.header-cell { text-align: center; font-weight: bold; color: var(--color-blue); padding-bottom: 10px; }
-.header-cell-side { display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-purple); }
+.header-cell { text-align: center; font-weight: bold; color: var(--color-text-primary); padding-bottom: 10px; }
+
+/* Specific column header colors to match the class boxes above */
+.matrix-header-row > div:nth-child(2) { color: var(--color-neon); }
+.matrix-header-row > div:nth-child(3) { color: var(--color-blue); }
+.matrix-header-row > div:nth-child(4) { color: var(--color-purple); }
+.header-cell-side { display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-text-secondary); }
+
+/* Row header colors for X / Y / Z (distinct from A/B/C column colors) */
+.matrix-content > .matrix-row:nth-child(2) .header-cell-side { color: var(--color-xyz-x); }
+.matrix-content > .matrix-row:nth-child(3) .header-cell-side { color: var(--color-xyz-y); }
+.matrix-content > .matrix-row:nth-child(4) .header-cell-side { color: var(--color-xyz-z); }
 
 .matrix-cell {
   background-color: var(--color-bg-card); border: 1px solid var(--color-bg-hover);

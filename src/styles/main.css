@@ -15,6 +15,18 @@
   --color-orange: #ff9500;
   --color-error: #ff0055;
   --color-success: #39ff14;
+
+  /* dim / background variants for XYZ (dark theme defaults) */
+  --color-xyz-x-dim: rgba(255, 184, 77, 0.12);
+  --color-xyz-y-dim: rgba(255, 111, 145, 0.10);
+  --color-xyz-z-dim: rgba(123, 223, 246, 0.10);
+}
+
+/* Additional semantic colors for ABC/XYZ matrix (distinct from A/B/C) */
+:root {
+  --color-xyz-x: #ffb84d; /* warm amber */
+  --color-xyz-y: #ff6f91; /* soft pink */
+  --color-xyz-z: #7bdff6; /* light cyan */
 }
 
 /* Light Mode */
@@ -35,6 +47,21 @@
   --color-orange: #e68600;
   --color-error: #cc0044;
   --color-success: #00b800;
+
+  /* Light-theme variants for XYZ colors */
+  --color-xyz-x: #ffd9a6;
+  --color-xyz-y: #ffb6c9;
+  --color-xyz-z: #cff6fb;
+
+  /* dim / background variants (use rgba for subtle headers) */
+  --color-xyz-x-dim: rgba(255, 184, 77, 0.14);
+  --color-xyz-y-dim: rgba(255, 111, 145, 0.12);
+  --color-xyz-z-dim: rgba(123, 223, 246, 0.12);
+
+  /* darker/dim defaults for dark theme */
+  --color-xyz-x-dim-dark: rgba(255, 184, 77, 0.12);
+  --color-xyz-y-dim-dark: rgba(255, 111, 145, 0.10);
+  --color-xyz-z-dim-dark: rgba(123, 223, 246, 0.10);
 
   /* Spacing */
   --spacing-xs: 0.5rem;

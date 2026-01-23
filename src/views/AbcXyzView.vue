@@ -726,6 +726,13 @@ const resetExercise = () => {
 .cell-bx, .cell-ay { background: rgba(0, 212, 255, 0.15); }
 .cell-cz { background: rgba(255, 107, 107, 0.2); }
 
+/* View-specific spacing & width tweaks to avoid cards touching/overlapping */
+.abc-xyz-view .container { max-width: 1200px; }
+.abc-xyz-view .grid-3 { gap: 2rem; grid-template-columns: repeat(3, 1fr); }
+.abc-xyz-view .class-card { padding: 0; }
+.abc-xyz-view .class-body { padding: 22px; }
+.abc-xyz-view .class-card .class-header { border-top-left-radius: 12px; border-top-right-radius: 12px; }
+
 /* Results */
 .results-summary { margin-top: 30px; }
 .stat-box { background: var(--color-bg-hover); padding: 20px; border-radius: 8px; text-align: center; }

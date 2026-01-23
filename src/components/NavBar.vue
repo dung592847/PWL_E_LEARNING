@@ -60,7 +60,7 @@ onMounted(() => {
 }
 
 .brand { font-size: 1.5rem; font-weight: 800; letter-spacing: -1px; }
-.brand-text { color: white; }
+  .brand-text { color: var(--color-text-primary); }
 .neon-dot { color: var(--color-neon); }
 
 .nav-links { display: flex; gap: 30px; align-items: center; }

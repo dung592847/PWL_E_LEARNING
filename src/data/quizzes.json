@@ -185,6 +185,33 @@
         "correctAnswer": "b",
         "explanation": "Die Rüstkosten werden auf mehr Stücke verteilt (Degressionseffekt)."
       }
+      ,
+      {
+        "id": 2,
+        "type": "multiple-choice",
+        "question": "Welche Maßnahme reduziert typischerweise den Lagerbestand, kann aber die Lieferfähigkeit verschlechtern?",
+        "options": [
+          { "id": "a", "text": "Erhöhung der Losgrößen" },
+          { "id": "b", "text": "Einführung von Just-in-Time (JIT)" },
+          { "id": "c", "text": "Sicherheitsbestände erhöhen" },
+          { "id": "d", "text": "Dezentralisierung der Lager" }
+        ],
+        "correctAnswer": "b",
+        "explanation": "JIT reduziert Lagerbestände durch bedarfsnahe Anlieferung, erhöht aber das Risiko von Lieferengpässen und kann die Lieferfähigkeit beeinträchtigen." 
+      },
+      {
+        "id": 3,
+        "type": "multiple-choice",
+        "question": "Was ist eine typische Folge der Dezentralisierung von Lager- und Beschaffungsfunktionen?",
+        "options": [
+          { "id": "a", "text": "Niedrigere Transportkosten durch größere Bündelung" },
+          { "id": "b", "text": "Erhöhte Bestandskosten insgesamt" },
+          { "id": "c", "text": "Zentralisierte Lieferantenbeziehungen" },
+          { "id": "d", "text": "Weniger Bestandsführung vor Ort" }
+        ],
+        "correctAnswer": "b",
+        "explanation": "Dezentralisierung kann die Bestände an mehreren Standorten erhöhen (redundante Sicherheitsbestände), was zu höheren Gesamtbestandskosten führt, obwohl Servicelevel lokal besser werden können." 
+      }
     ]
   }
 }

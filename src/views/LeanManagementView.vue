@@ -49,6 +49,7 @@
             class="step-card"
             :class="{ 'active': activeStep === step.id }"
             @mouseenter="activeStep = step.id"
+            @mouseleave="activeStep = 0"
           >
             <div class="step-header">
               <div class="step-number">{{ step.id }}S</div>
@@ -119,7 +120,7 @@ import { ref } from 'vue'
 import leanData from '../data/lean-management.json'
 
 const content = ref(leanData)
-const activeStep = ref(1)
+const activeStep = ref(0)
 </script>
 
 <style scoped>
@@ -207,7 +208,7 @@ const activeStep = ref(1)
 
 /* Application */
 .application-section .card { padding: 30px; }
-.card-neon { border: 1px solid var(--color-neon); }
+.card-neon { border: none; }
 .situation { font-size: 1.1rem; margin-bottom: 20px; }
 .timeline { margin: 20px 0; border-left: 2px solid var(--color-bg-hover); padding-left: 25px; }
 .timeline-item { position: relative; margin-bottom: 15px; color: var(--color-text-secondary); }

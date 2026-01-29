@@ -427,10 +427,14 @@ const calculateExerciseCost = () => {
 .algo-steps { display: grid; gap: 20px; }
 .algo-card { display: flex; gap: 20px; background: var(--color-bg-card); padding: 20px; border-radius: 8px; }
 .algo-num {
-  font-size: 2rem; font-weight: bold; color: var(--color-bg-body);
-  background: var(--color-purple); width: 50px; height: 50px;
+  font-size: 2rem; font-weight: bold;
+  background: var(--algo-circle-bg, #000); /* black in dark, white in light */
+  color: var(--color-purple); /* number color matches border color */
+  width: 50px; height: 50px;
   display: flex; align-items: center; justify-content: center;
   border-radius: 50%; flex-shrink: 0;
+  border: 3px solid var(--color-purple); /* colored outline */
+  box-sizing: border-box;
 }
 .algo-content h3 { margin-bottom: 10px; }
 .algo-note { font-size: 0.85rem; color: var(--color-neon); margin-top: 10px; }
@@ -447,7 +451,7 @@ const calculateExerciseCost = () => {
 
 .cost-table { width: 100%; border-collapse: collapse; text-align: center; }
 .cost-table th, .cost-table td { border: 1px solid #333; padding: 15px; position: relative; transition: all 0.3s ease; }
-.cost-table th { color: var(--color-text-secondary); background: #111; }
+  .cost-table th { color: var(--table-head-text); background: var(--table-head-bg); }
 .cell-allocated { background-color: rgba(57, 255, 20, 0.2); border-color: var(--color-neon) !important; }
 .alloc {
   position: absolute; bottom: 2px; right: 2px;
@@ -464,7 +468,7 @@ const calculateExerciseCost = () => {
   color: #ff4444 !important; 
   font-weight: bold;
 }
-.demand-row td { background: #111; color: var(--color-text-secondary); font-size: 0.9rem; }
+  .demand-row td { background: var(--table-head-bg); color: var(--table-head-text); font-size: 0.9rem; }
 
 .result-display { margin-top: 20px; text-align: center; padding-top: 20px; border-top: 1px solid #333; }
 .total-cost { font-size: 1.5rem; color: var(--color-neon); margin-bottom: 10px; }
@@ -503,9 +507,9 @@ const calculateExerciseCost = () => {
   padding: 12px;
 }
 
-.exercise-table th {
-  background: #111;
-  color: var(--color-text-secondary);
+  .exercise-table th {
+  background: var(--table-head-bg);
+  color: var(--table-head-text);
 }
 
 .exercise-table th small {
@@ -648,6 +652,7 @@ const calculateExerciseCost = () => {
     width: 40px;
     height: 40px;
     font-size: 1.5rem;
+    border-width: 2px;
   }
   
   .sim-controls {

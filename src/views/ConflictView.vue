@@ -82,6 +82,27 @@
         </div>
       </section>
 
+      <!-- Quiz Hints: kurz sichtbare Fakten zum Beantworten der Quizfragen -->
+      <section class="content-section">
+        <h2>Kurzinfo zum Quiz</h2>
+        <div class="quiz-hints grid-3">
+          <div class="card">
+            <h3>Rüstkosten &amp; Losgröße</h3>
+            <p>Rüstkosten pro Auftrag sind unabhängig von der Losgröße, werden aber pro Stück kleiner, wenn die Losgröße steigt (Degressionseffekt). Die Andler-Formel (EOQ) zeigt die optimale Losgröße.</p>
+          </div>
+
+          <div class="card">
+            <h3>Just-in-Time (JIT)</h3>
+            <p>JIT zielt auf minimale Bestände durch bedarfsnahe Anlieferung; dadurch sinken Lagerkosten, aber das Risiko von Lieferengpässen und einer schlechteren Lieferfähigkeit bei Störungen steigt.</p>
+          </div>
+
+          <div class="card">
+            <h3>Dezentralisierung</h3>
+            <p>Dezentralisierung kann lokale Servicelevels verbessern, führt aber häufig zu höheren Gesamtbeständen, da an mehreren Standorten Sicherheitsbestände vorgehalten werden.</p>
+          </div>
+        </div>
+      </section>
+
       <!-- Arman Industries Solution -->
       <section class="content-section">
         <h2>{{ content.armanCase.title }}</h2>
@@ -192,7 +213,7 @@ const content = ref(conflictData)
 .detail-list { padding-left: 20px; color: var(--color-text-secondary); font-size: 0.9rem; }
 
 /* Options */
-.card-neon { border: 1px solid var(--color-neon); }
+.card-neon { border: none; }
 .situation { font-size: 1.1rem; margin-bottom: 20px; }
 .options-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
 .option-card {
@@ -216,6 +237,17 @@ const content = ref(conflictData)
 .module-nav {
   display: flex; justify-content: space-between; margin-top: 60px;
   padding-top: 20px; border-top: 1px solid var(--color-bg-hover);
+}
+
+/* Ensure grid gaps and card paddings apply reliably and headings don't sit on the border */
+.grid-3 { gap: var(--spacing-lg); }
+.grid-3 .card { padding: var(--spacing-lg); }
+.grid-3 .card h3,
+.card-neon h3,
+.option-card h4,
+.solution-box h3 {
+  margin-top: 0.4rem;
+  margin-bottom: 0.8rem;
 }
 
 @media (max-width: 768px) {

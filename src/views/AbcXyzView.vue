@@ -218,8 +218,7 @@
         <h2 class="section-title">Die 9-Felder-Matrix</h2>
         <p>{{ content.combinedMatrix.description }}</p>
 
-        <div class="matrix-visual">
-          <div class="matrix-label-y">XYZ →</div>
+          <div class="matrix-visual">
           <div class="matrix-content">
             <div class="matrix-header-row">
               <div></div>
@@ -639,7 +638,7 @@ const resetExercise = () => {
 
 <style scoped>
 .module-header {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+  background: var(--module-header-bg);
   padding: 60px 0;
   text-align: center;
   border-bottom: 1px solid var(--color-bg-hover);
@@ -697,10 +696,9 @@ const resetExercise = () => {
 .class-cell { font-weight: bold; font-size: 1.2rem; }
 
 /* Matrix Visual */
-.matrix-visual { display: flex; justify-content: center; margin-top: 30px; position: relative; padding-left: 50px; }
-.matrix-label-y { position: absolute; left: 0; top: 50%; transform: rotate(-90deg); font-weight: bold; color: var(--color-text-secondary); }
-.matrix-content { display: flex; flex-direction: column; gap: 4px; }
-.matrix-header-row { display: grid; grid-template-columns: 50px 1fr 1fr 1fr; gap: 4px; }
+.matrix-visual { display: flex; justify-content: center; margin-top: 30px; position: relative; }
+.matrix-content { display: flex; flex-direction: column; gap: 4px; align-items: center; margin-left: -60px; }
+ .matrix-header-row { display: grid; grid-template-columns: 50px 150px 150px 150px; gap: 4px; }
 .matrix-row { display: grid; grid-template-columns: 50px 150px 150px 150px; gap: 4px; }
 .header-cell { text-align: center; font-weight: bold; color: var(--color-text-primary); padding-bottom: 10px; }
 
@@ -982,9 +980,10 @@ const resetExercise = () => {
   
   /* Matrix Visual */
   .matrix-visual {
-    padding-left: 30px;
+    padding-left: 0;
     overflow-x: auto;
   }
+  .matrix-content { margin-left: -10px; }
   
   .matrix-row {
     grid-template-columns: 40px 100px 100px 100px;
@@ -1124,8 +1123,9 @@ const resetExercise = () => {
   
   /* Matrix smaller */
   .matrix-visual {
-    padding-left: 25px;
+    padding-left: 0;
   }
+  .matrix-content { margin-left: 0; }
   
   .matrix-row {
     grid-template-columns: 30px 80px 80px 80px;

@@ -47,7 +47,7 @@ onMounted(() => {
 
 <style scoped>
 .navbar {
-  background: var(--color-bg-card);
+  background: var(--navbar-bg);
   border-bottom: 1px solid var(--color-bg-hover);
   position: sticky; top: 0; z-index: 100;
   padding: 15px 0;

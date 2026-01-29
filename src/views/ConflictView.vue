@@ -153,7 +153,7 @@ const content = ref(conflictData)
 
 <style scoped>
 .module-header {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+  background: var(--module-header-bg);
   padding: 60px 0; text-align: center;
   border-bottom: 1px solid var(--color-bg-hover);
 }
